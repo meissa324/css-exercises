@@ -89,3 +89,64 @@
   font-size: 13px;
   font-weight: normal;  
 }
+
+
+/** layout */
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  gap: 4px;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/span2;
+}
+
+.menu ul{
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav ul{
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sidebar{
+  display: grid;
+  gap: 50px;
+  /* justify-content: center; */
+  grid-column: 1/2;
+  grid-row: 2/span 4;
+}
+
+.article{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  /* grid-template-rows: 200px; */
+  gap: 15px;
+  grid-column: 2/ span1;
+  grid-auto-rows: 200px;/*alot of the rows are implicit*/
+}
+
+.footer{
+  grid-column: 1/span2;
+}
+
+.nav{
+  grid-column: 2/ span1;
+  grid-row: 2/3;
+}
+
+.side-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; Ensure the div takes full height of its parent */
+}
